@@ -1,0 +1,8 @@
+.game-card {
+    border: 1px solid red;
+    padding: 10px;
+    display: block;
+    border-radius: 20px;
+    margin: 10px auto;
+    color: #fff;
+}

@@ -1,0 +1,83 @@
+.game-board {
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    border: 2px solid #333;
+    overflow: hidden;
+  }
+  
+  /* Фоновые изображения для локаций */
+  .game-board.room {
+    background: url('../../assets/room.jpg') center/cover;
+  }
+  
+  .game-board.garage {
+    background: url('../../assets/garage.jpg') center/cover;
+  }
+  
+  .game-board.kitchen {
+    background: url('../../assets/kitchen.jpg') center/cover;
+  }
+  
+  .location-selector {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+  
+  .location-selector button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .danger-item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+  }
+  
+  .danger-item:hover {
+    transform: scale(1.1);
+    border: 1px solid red;
+    border-radius: 20px;
+  }
+  
+  /* Изображения для опасных предметов */
+  .socket { background-image: url('../../assets/boch.png'); }
+  .candle { background-image: url('../../assets/spichka.png'); }
+  .heater { background-image: url('../../assets/koster.png'); }
+  .wires { background-image: url('../../assets/koster2.png'); }
+  .gas { background-image: url('../../assets/benzin.png'); }
+  .oil { background-image: url('../../assets/benzin2.png'); }
+  .tools { background-image: url('../../assets/zamikanie.png'); }
+  .paint { background-image: url('../../assets/zamikanie2.png'); }
+  
+  .trash-bin {
+    position: absolute;
+    bottom: -70px;
+    right: 20px;
+    font-size: 48px;
+    transition: transform 0.3s;
+  }
+  
+  .trash-bin.active {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px #ff0000);
+  }
+  
+  .game-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
